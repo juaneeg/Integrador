@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Integrador.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+        <h1>RESTAURANTE</h1>
+        <br />
+        <br />
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Principal.aspx" 
+                            Text="Página principal"/>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Mesas.aspx" Text="Mesas" 
+                            Value="Mesas" Selectable="False"/>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Mozos.aspx" Text="Mozos" Value="Mozos" 
+                            Selectable="False">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Platos.aspx" Text="Platos" 
+                            Value="Platos" Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Formularios/CartaPlato.aspx" Text="Cartas" 
+                            Value="Cartas" Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Pedido.aspx" Text="Pedido" 
+                            Value="Pedido" Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Reservas.aspx" Text="Reservas" 
+                            Value="Reservas" Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Factura.aspx" Text="Facturas" 
+                            Value="Facturas" Selectable="False"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Formularios/Listados.aspx" Selectable="False" 
+                            Text="Estadisticas" Value="Estadisticas"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
