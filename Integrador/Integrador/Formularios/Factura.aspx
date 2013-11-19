@@ -36,5 +36,7 @@
 <br />
 <asp:Button ID="btnGuardar" runat="server" Text="Facturar" 
         onclick="btnGuardar_Click" />
+    <asp:ImageButton ID="ImageButton1" runat="server" 
+        ImageUrl="~/Imagenes/Guardar.png" />
 <br />
 </asp:Content>
